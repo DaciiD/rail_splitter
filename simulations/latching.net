@@ -1,0 +1,53 @@
+* C:\users\aleksa\Desktop\petnica\rail_splitter\simulations\latching.asc
+R2 N003 N007 1k
+R1 N002 N001 1k
+R3 out1 N003 10k
+R4 0 N002 10k
+V1 vcc 0 10
+R5 N001 N007 0.1
+V2 N006 0 1.8
+V3 vee 0 -10
+R7 out2 N004 1k
+R13 N007 0 6
+XU1 N002 N003 vcc vee out1 LT1001
+XU2 out1 N006 vcc vee out2 LT1001
+R6 N022 N013 0.1
+R8 N014 N013 1k
+R9 N016 N022 1k
+R10 N015 N016 10k
+R11 0 N014 10k
+XU3 N014 N016 vcc vee N015 LT1001
+R12 N013 0 6
+XU5 N015 N020 vcc vee N017 LT1001
+V4 N020 0 1.8
+R16 N018 N017 1k
+D1 N004 N005 1N4148
+D2 N018 N005 1N4148
+Q1 N010 N005 0 0 2N2222
+Q2 N010 N019 0 0 2N2222
+R17 N008 N010 1k
+R18 vcc N008 10k
+R19 N009 N019 10k
+Q3 N009 N008 vcc 0 2N2907
+C1 vcc N008 1µ
+M1 N001 cutoff+ vcc vcc Si7469DP
+R21 N009 0 1k
+R20 N009 cutoff+ 1k
+M2 N022 cutoff- vee vee IRFP240
+D3 N009 N011 1N4148
+Q4 cutoff- N021 vee 0 2N2222
+Q5 cutoff- N012 vcc 0 2N2907
+R14 N012 N011 1k
+R15 N021 N011 1k
+.model D D
+.lib C:\users\aleksa\Documents\LTspiceXVII\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\users\aleksa\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\aleksa\Documents\LTspiceXVII\lib\cmp\standard.mos
+.tran 0 0.5ms 0 500n uic
+.lib LTC.lib
+.backanno
+.end
