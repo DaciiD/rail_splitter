@@ -1,4 +1,4 @@
-23045526998369937
+23049075886603724
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -94409,6 +94409,13 @@ Varistor VF
 2
 2
 rail_lib
+DPDT_bigger
+C&K sub miniature slide switch, JS series, DPDT, right angle, http://www.ckswitches.com/media/1422/js.pdf
+switch DPDT
+0
+6
+6
+rail_lib
 WC1602A - below
 LCD 16x2 http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf
 LCD 16x2 Alphanumeric 16pin
@@ -94422,3 +94429,10 @@ dpst
 0
 4
 4
+rail_lib
+holder
+
+
+0
+1
+1
